@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the Django project code to the container
-COPY . .
+COPY . /LMS
 
 # Expose the port on which the Django app will run (default is 8000)
 EXPOSE 8000
