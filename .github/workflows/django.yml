@@ -29,4 +29,3 @@ jobs:
       run: |
         cd LMS
         python manage.py test
-        python manange.py runserver
