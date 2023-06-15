@@ -49,6 +49,22 @@
         "documentation": {}
     },
     {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -57,11 +73,11 @@
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -70,6 +86,22 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -89,12 +121,37 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "management",
+        "importPath": "django.core",
+        "description": "django.core",
+        "isExtraImport": true,
+        "detail": "django.core",
         "documentation": {}
     },
     {
@@ -138,7 +195,7 @@
         "kind": 5,
         "importPath": "LMS.LMS.settings",
         "description": "LMS.LMS.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'user',",
         "detail": "LMS.LMS.settings",
         "documentation": {}
     },
@@ -147,7 +204,7 @@
         "kind": 5,
         "importPath": "LMS.LMS.settings",
         "description": "LMS.LMS.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'user',\n]\nMIDDLEWARE = [",
         "detail": "LMS.LMS.settings",
         "documentation": {}
     },
@@ -273,7 +330,7 @@
         "kind": 5,
         "importPath": "LMS.LMS.urls",
         "description": "LMS.LMS.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('user/',include('user.urls')),\n]",
         "detail": "LMS.LMS.urls",
         "documentation": {}
     },
@@ -287,12 +344,48 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "LMS.user.migrations.0001_initial",
+        "description": "LMS.user.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Userprofile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(default='abc', max_length=30)),",
+        "detail": "LMS.user.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "UserConfig",
         "kind": 6,
         "importPath": "LMS.user.apps",
         "description": "LMS.user.apps",
         "peekOfCode": "class UserConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'user'",
         "detail": "LMS.user.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Userprofile",
+        "kind": 6,
+        "importPath": "LMS.user.models",
+        "description": "LMS.user.models",
+        "peekOfCode": "class Userprofile(models.Model):\n    name=models.CharField(max_length=30,default=\"abc\")\n    image=models.ImageField()\n    date=models.DateField(auto_now=False, auto_now_add=True)\n    def __str__(self) -> str:\n        return f'Hello {self.name} '",
+        "detail": "LMS.user.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "LMS.user.urls",
+        "description": "LMS.user.urls",
+        "peekOfCode": "urlpatterns = [\n    path('',views.index,name='index'),\n]",
+        "detail": "LMS.user.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "LMS.user.views",
+        "description": "LMS.user.views",
+        "peekOfCode": "def index(request):\n    return HttpResponse(\"Hello! its a test page\")",
+        "detail": "LMS.user.views",
         "documentation": {}
     },
     {
