@@ -168,7 +168,7 @@
         "kind": 5,
         "importPath": "LMS.LMS.settings",
         "description": "LMS.LMS.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-q1c5#8@&t($=*@bt#&8))vjt$@6z^-rjlk7t1w3%rxqllgjwzy'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-q1c5#8@&t($=*@bt#&8))vjt$@6z^-rjlk7t1w3%rxqllgjwzy'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['44.212.15.129']\n# Application definition\nINSTALLED_APPS = [",
         "detail": "LMS.LMS.settings",
         "documentation": {}
     },
@@ -177,7 +177,7 @@
         "kind": 5,
         "importPath": "LMS.LMS.settings",
         "description": "LMS.LMS.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-q1c5#8@&t($=*@bt#&8))vjt$@6z^-rjlk7t1w3%rxqllgjwzy'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-q1c5#8@&t($=*@bt#&8))vjt$@6z^-rjlk7t1w3%rxqllgjwzy'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['44.212.15.129']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "LMS.LMS.settings",
         "documentation": {}
     },
@@ -186,7 +186,7 @@
         "kind": 5,
         "importPath": "LMS.LMS.settings",
         "description": "LMS.LMS.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['44.212.15.129']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "LMS.LMS.settings",
         "documentation": {}
     },
@@ -195,7 +195,7 @@
         "kind": 5,
         "importPath": "LMS.LMS.settings",
         "description": "LMS.LMS.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'user',",
+        "peekOfCode": "ALLOWED_HOSTS = ['44.212.15.129']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'user',",
         "detail": "LMS.LMS.settings",
         "documentation": {}
     },
