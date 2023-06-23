@@ -81,6 +81,14 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -113,6 +121,24 @@
         "documentation": {}
     },
     {
+        "label": "yfinance",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yfinance",
+        "description": "yfinance",
+        "detail": "yfinance",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -129,6 +155,31 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -137,11 +188,111 @@
         "documentation": {}
     },
     {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "django.http",
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.offline",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.offline",
+        "description": "plotly.offline",
+        "detail": "plotly.offline",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.graph_objs",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.graph_objs",
+        "description": "plotly.graph_objs",
+        "detail": "plotly.graph_objs",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "xgboost",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xgboost",
+        "description": "xgboost",
+        "detail": "xgboost",
+        "documentation": {}
+    },
+    {
+        "label": "XGBRegressor",
+        "importPath": "xgboost",
+        "description": "xgboost",
+        "isExtraImport": true,
+        "detail": "xgboost",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "Sequential",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "LSTM",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Bidirectional",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "MinMaxScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
         "documentation": {}
     },
     {
@@ -427,8 +578,80 @@
         "kind": 2,
         "importPath": "LMS.user.views",
         "description": "LMS.user.views",
-        "peekOfCode": "def index(request):\n#    return HttpResponse(\"HHS\")\n    context=Userprofile.objects.all()[1]\n    return render(request,'user/index.html',{'context':context})",
+        "peekOfCode": "def index(request):\n    # Assuming you have two sets of dates and corresponding values\n    path=os.path.join(settings.BASE_DIR,'user/tesla.csv')\n    df=pd.read_csv(path)\n    dates = df.iloc[:,0].values[:-6]\n    values=df.Close.values[:-6]\n    name=''\n    print(df.head())\n    trace1 = go.Scatter(x=dates, y=values, mode='lines',  line=dict(color='blue'), name='Close')\n    dates = df.iloc[:,0].values[-7:]",
         "detail": "LMS.user.views",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "LMS.user.views1",
+        "description": "LMS.user.views1",
+        "peekOfCode": "def index(request):\n    stocks = [\"TSLA\",\"HMC\"]  #, \"HMC\", \"F\"\n    data={}\n    for stock in stocks:\n        data[stock]=datagenerate(stock)\n        print(data[stock].iloc[:-5])\n    return render(request,'user/index.html',{'div':0,'context':'p'})\ndef datagenerate(stocks):    \n    history = yf.download(stocks, start=\"2022-01-01\", end=\"2022-12-31\")\n    # Extract the date and closing prices for each stock",
+        "detail": "LMS.user.views1",
+        "documentation": {}
+    },
+    {
+        "label": "datagenerate",
+        "kind": 2,
+        "importPath": "LMS.user.views1",
+        "description": "LMS.user.views1",
+        "peekOfCode": "def datagenerate(stocks):    \n    history = yf.download(stocks, start=\"2022-01-01\", end=\"2022-12-31\")\n    # Extract the date and closing prices for each stock\n#    global df\n    df= pd.DataFrame(history)\n    # Convert the 'Date' column to datetime format\n    # df['Date'] = pd.to_datetime(df['Date'])\n    # # Set the 'Date' column as the index\n    # df.set_index('Date', inplace=True)\n    return df",
+        "detail": "LMS.user.views1",
+        "documentation": {}
+    },
+    {
+        "label": "preprocessing",
+        "kind": 2,
+        "importPath": "LMS.user.views1",
+        "description": "LMS.user.views1",
+        "peekOfCode": "def preprocessing(stock_data):\n    # Create a dataframe from the stock data\n    # Select the 'Close' price as the target variable\n    target_variable = 'Close'\n    # Select the features and the target variable\n    features = ['Open', 'High', 'Low', 'Volume']\n    target = df[target_variable]\n    # Split the data into training and testing sets\n    X_train, X_test, y_train, y_test = train_test_split(df[features], target, test_size=0.2, shuffle=False)\n    return X_train, X_test, y_train, y_test",
+        "detail": "LMS.user.views1",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "kind": 2,
+        "importPath": "LMS.user.views1",
+        "description": "LMS.user.views1",
+        "peekOfCode": "def train(X_train, X_test, y_train, y_test):\n    model = XGBRegressor()\n    model.fit(X_train, y_train)\n    return model\ndef predict(model):\n    next_week_dates = pd.date_range(end=df.index[-1], periods=7, freq='D')\n    predictions_df = pd.DataFrame(index=next_week_dates, columns=['Predicted Price'])\n    for date in next_week_dates:\n        prediction = model.predict(last_row)\n        predictions_df.loc[date, 'Predicted Price'] = prediction[0]",
+        "detail": "LMS.user.views1",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "LMS.user.views1",
+        "description": "LMS.user.views1",
+        "peekOfCode": "def predict(model):\n    next_week_dates = pd.date_range(end=df.index[-1], periods=7, freq='D')\n    predictions_df = pd.DataFrame(index=next_week_dates, columns=['Predicted Price'])\n    for date in next_week_dates:\n        prediction = model.predict(last_row)\n        predictions_df.loc[date, 'Predicted Price'] = prediction[0]\n        last_row = last_row.shift(-1)\n        last_row.iloc[-1] = prediction[0]\n    return predictions_df\n    # Perform stock prediction for one more week",
+        "detail": "LMS.user.views1",
+        "documentation": {}
+    },
+    {
+        "label": "build_lstm_model",
+        "kind": 2,
+        "importPath": "LMS.user.viewsfinal",
+        "description": "LMS.user.viewsfinal",
+        "peekOfCode": "def build_lstm_model(num_layers, num_units,time_steps,num_features, bidirectional=False):\n    model = Sequential()\n    if bidirectional:\n        # Add a bidirectional LSTM layer\n        model.add(Bidirectional(LSTM(units=num_units, return_sequences=True), input_shape=(time_steps, num_features)))\n    else:\n        # Add the first LSTM layer\n        model.add(LSTM(units=num_units, return_sequences=True, input_shape=(time_steps, num_features)))\n    # Add additional LSTM layers\n    for _ in range(2, num_layers):",
+        "detail": "LMS.user.viewsfinal",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_technical_indicators",
+        "kind": 2,
+        "importPath": "LMS.user.viewsfinal",
+        "description": "LMS.user.viewsfinal",
+        "peekOfCode": "def calculate_technical_indicators(df, window_size=14):\n    # Calculate Moving Averages (MA)\n    df['MA_10'] = df['Close'].rolling(window=10).mean()\n    df['MA_30'] = df['Close'].rolling(window=30).mean()\n    # Calculate Relative Strength Index (RSI)\n    delta = df['Close'].diff()\n    up, down = delta.copy(), delta.copy()\n    up[up < 0] = 0\n    down[down > 0] = 0\n    avg_gain = up.rolling(window=window_size).mean()",
+        "detail": "LMS.user.viewsfinal",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "LMS.user.viewsfinal",
+        "description": "LMS.user.viewsfinal",
+        "peekOfCode": "def index(request):\n    ticker = input(\"Stock name\")\n    df = yf.download(ticker)#,start=start_date) #, start='max', end=(datetime.today() - timedelta(days=1)).strftime('%Y-%m-%d')\n    df=calculate_technical_indicators(df)\n    df.dropna(axis=0,inplace=True)\n    columns = df.columns.to_list()\n    data = df[columns].values\n    # Normalize the data\n    scaler = MinMaxScaler()\n    scaled_data = scaler.fit_transform(data)",
+        "detail": "LMS.user.viewsfinal",
         "documentation": {}
     },
     {

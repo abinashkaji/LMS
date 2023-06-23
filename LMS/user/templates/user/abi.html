@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        alert("This alert box was called with the onload event");
+      </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js">
+        </script>
+  
+    <title>Document</title>
+</head>
+<body>
+    <div id='abi' name="abi" width="200" height="200" > hello  </div>    
+    <script>
+    const x = ["Oct 18 2019 01: +0", "Oct 19 2019 01: +0", "Oct 20 2019 01: +0"];
+    const y = [5.492, 3.006, 1.618, 1.373, 1.014, 0.665];
+    const trace1 = {
+      x: x,
+      y: y,
+      mode: "lines",
+    };
+    var layout = {
+  width: 500,
+  height: 500
+    };
+    Plotly.newPlot(
+      "abi",
+      [trace1],layout
+    );
+
+
+
+    var dates = JSON.parse('{{ dates|safe }}');
+    var prices = JSON.parse('{{ prices|safe }}');
+    var data = [
+        {
+            x: dates,
+            y: prices,
+            type: 'scatter',
+            mode: 'lines',
+            name: 'Tesla Stock Price'
+        }
+    ];
+
+    var layout = {
+        title: 'Tesla Stock Price',
+        xaxis: {
+            title: 'Date'
+        },
+        yaxis: {
+            title: 'Price'
+        },
+        width: 500,
+        height: 500
+
+    };
+
+    Plotly.newPlot('abi',data, layout);
+
+
+
+</script>
+</body>
+</html>
